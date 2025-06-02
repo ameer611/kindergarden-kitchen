@@ -1,0 +1,53 @@
+# -------------------
+# Python (FastAPI)
+# -------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.sqlite3
+.env
+.env.*
+.venv/
+venv/
+instance/
+*.log
+alembic/versions/*.pyc
+
+# mypy, pytest, coverage
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# VSCode & other IDEs
+.vscode/
+.idea/
+
+# -------------------
+# Node.js (Next.js)
+# -------------------
+node_modules/
+.next/
+out/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+turbo/
+.cache/
+dist/
+
+# -------------------
+# OS / Misc
+# -------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
