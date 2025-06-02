@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.v1 import auth, users, ingredients, meals, serving, estimates, reports, alerts
+from app.api.v1 import auth, users, ingredients, meals, serving, estimates, reports, alerts, logs, recipe_items
 from app.ws import inventory as ws_inventory
 from app.core.config import settings
 from app.tasks.worker import celery_app
@@ -34,6 +34,9 @@ app.include_router(serving.router, prefix=f"{settings.API_V1_STR}/meals", tags=[
 app.include_router(estimates.router, prefix=f"{settings.API_V1_STR}/estimates", tags=["estimates"])
 app.include_router(reports.router, prefix=f"{settings.API_V1_STR}/reports", tags=["reports"])
 app.include_router(alerts.router, prefix=f"{settings.API_V1_STR}/alerts", tags=["alerts"])
+app.include_router(logs.router, prefix=f"{settings.API_V1_STR}/logs", tags=["logs"])
+app.include_router(recipe_items.router, prefix=f"{settings.API_V1_STR}/recipe-items", tags=["recipe-items"])
+
 
 # WebSocket Router
 app.include_router(ws_inventory.router) # WebSocket router for /ws/inventory
