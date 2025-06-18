@@ -20,7 +20,7 @@ The easiest way to run the application is using Docker Compose:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ameer611/kindergarden-kitchen.git
    cd kindergarten_kitchen
    ```
 
